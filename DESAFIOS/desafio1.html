@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO #1</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*SALUDO EN CONSOLA*/
+    function saludo(){
+        console.log("¡Hola mundo!!");
+    }
+    saludo();
+
+/*PARAMETRO NOMBRE + SALUDO*/
+    function saludar(name){
+        console.log(`¡Hola ${name}!`);
+    }
+    saludar('Nyara');
+    saludar('Scarlett');
+
+/*DOBLE DEL NÚMERO*/
+    function doble(numero){
+        console.log(`${numero}`*2);
+    }
+    doble(5);
+    doble(45);
+
+/*PROMEDIO DE 3 NÚMEROS*/
+function promedio(numero1, numero2, numero3){
+        console.log(`${numero1 + numero2 + numero3}`/3);
+    }
+    promedio(5, 9, 7);
+    promedio(8, 3, 4);
+
+/*EL MAYOR*/
+    function numeroMayor(num1, num2){
+        if (num1 > num2){
+            console.log(num1);
+        }else{
+            console.log(num2);
+        }
+    }
+    numeroMayor(56, 45);
+    numeroMayor(89, 92);
+
+/*RESULTADO DE MULTIPLICARSE POR SÍ MISMO*/
+    function multiplicacion(numero){
+        console.log(`${numero * numero}`);
+    }
+
+multiplicacion(8);
+multiplicacion(12);
+
+</script>
+</html>
