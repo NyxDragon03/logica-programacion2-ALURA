@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFÍO #2</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function imprimirParametro(parametro){
+        console.log(parametro);
+    }
+    
+/*INDICE DE MASA CORPORAL*/
+    function imc (peso, estatura){
+        let centimetros = estatura**2;
+        let indice = peso/centimetros;
+        console.log('su IMC es: '+indice);
+        return;
+    }
+    imc(48, 1.58);
+    imc(68, 1.60);
+
+/*FACTORIAL DE UN NUM*/
+    function factorial(num){
+        let calculo = 1;
+        for (let i = num; i > 0; i--){
+            calculo =calculo*i;
+        }
+        return calculo;
+    }
+    imprimirParametro(8);
+    console.log(`el factorial es: ${factorial(8)}`);
+    imprimirParametro(6);
+    console.log(`el factorial es: ${factorial(6)}`);
+
+/*CONVERSIÓN DE MONEDA*/
+    function conversion(dolares){
+        let cotizacion = dolares*4044;
+        let valor = dolares;
+        console.log(`${valor} USD, son ${cotizacion} COP`);
+    }
+    conversion(20);
+
+/*MOSTRAR EL AREA Y PERIMETRO DE UN RECTANGULO RESULTADO DE LOS PARAMETROS*/ 
+    function rectangulo(base, altura){
+        let medida1 = base;
+        let medida2 = altura;
+        let area = base*altura;
+        let perimetro = base*2+altura*2
+        document.write(`El rectangulo con medidas b: ${medida1} y h: ${medida2}, tiene un area de ${area} y un perimetro de ${perimetro}. <br>`)
+    }
+    rectangulo(42, 26)
+
+/*MOSTRAR EL AREA Y PERIMETRO DE UN CIRCULO RESULTADO DE LOS PARAMETROS*/
+    function circulo(radio){
+        const pi = 3.14
+        let area = pi*radio**2
+        let perimetro = 2*pi*radio
+        let rad = radio 
+        document.write(`El circulo con radio: ${rad}, tiene un area de ${area} y un perimetro de ${perimetro}. <br>`)
+    }
+    circulo(25)
+
+/*TABLA DE MULTIPLICAR DE UN NUMERO*/
+    function tablaMultiplicar(numero){
+        for (let i = 1; i <= 10; i++){
+            document.write(`${numero} x ${i} = ${numero * i} <br>`)
+        }
+    }
+    tablaMultiplicar(8)
+</script>
+</html>
