@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFÍO #3</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*LISTAS*/
+    let listaGenerica = [];
+    let lenguajesProgramacion = ['JavaScript', 'C', 'C++', 'kotlin', 'python'];
+
+    //AÑADIR A LA LISTA
+    lenguajesProgramacion.push('java', 'ruby', 'goLang');
+
+    //MOSTRAR EN CONSOLA
+    console.log(lenguajesProgramacion)
+    
+    //MOSTRAR EN ORDEN INVERSO
+    lenguajesProgramacion.reverse();
+    console.log(lenguajesProgramacion);
+
+    //PROMEDIO DE ELEMENTOS
+    let elementos=[8, 5, 6, 9, 3];
+    function calcularProm (){
+        let acumulado=0;
+        for(let i=0; i<elementos.length; i++){
+        acumulado=acumulado+elementos[i];
+    }
+    let promedio=acumulado/elementos.length;
+    console.log(`el promedio es: ${promedio}`);
+    }
+    calcularProm();
+    
+    //MOSTRAR EL MAYOR Y MENOR
+    let mostrar=[1, 9, 7, 6, 3];
+    function mostrarMayorMenor(){
+        let mayor=mostrar[0];
+        for(let i=0; i<mostrar.length; i++){
+            if(mostrar[i]>mayor){ 
+                mayor=mostrar[i];
+            }
+        }
+        let menor=mostrar[0];
+        for(let i=0; i>mostrar.length; i++){
+            if(mostrar[i]>menor){ 
+                menor=mostrar[i];
+            }
+        }
+        console.log(`El mayor es: ${mayor} y el menor es: ${menor}`);
+    }
+    mostrarMayorMenor();
+
+    //SUMA DE LOS ELEMENTOS
+    let  sumar = [115, 224, 500, 800, 321];
+    function sumarElementos(){
+        let total=0;
+        for(let i=0; i<sumar.length; i++){
+            total+=sumar[i];
+        }
+        console.log(`La suma de los elementos da como resultado: ${total}`)
+    }
+    sumarElementos();
+    
+    //DAR LA POSICIÓN SEGUN PARAMETRO
+    let frutas = ['mango', 'granada', 'cereza', 'kiwi', 'papaya', 'maracuyá'];
+    function encontrarPosicion (lista, elemento){
+        for (let i = 0; i < frutas.length; i++){
+            if(lista[i] === elemento){
+                console.log(`La posición de ${elemento} es ${i}`);
+                return;
+            }
+        }
+        console.log(`La posición de ${elemento} es -1 ya que no está en lista`);
+    }
+    encontrarPosicion(frutas, 'kiwi')
+    encontrarPosicion(frutas, 'manzana')
+
+    //2 LISTAS DEL MISMO TAMAÑO, DEVOLVER 1 CON LA SUMA DE LOS ELEMENTOS UNO A UNO
+    let lista1=[6, 2, 1, 8, 9];
+    let lista2=[3, 2, 7, 9, 6];
+    function sumaListas(listaA, listaB){
+        let sumaElementosListas = [];
+        for (let i = 0; i < listaA.length; i++) {
+            sumaElementosListas.push(listaA[i] + listaB[i]);
+        }
+        console.log(sumaElementosListas);
+        return sumaElementosListas;
+        
+    }
+    sumaListas(lista1,lista2)
+
+    //NUEVA LISTA CON EL CUADRADO DE LA ANTERIOR
+    let numeros =[6, 8, 2, 9, 4];
+    function cuadradoDeElementos(lista) {
+        let cuadrado = [];
+        for (let i = 0; i < lista.length; i++) {
+            cuadrado.push(lista[i]**2);
+        }
+        console.log(cuadrado);
+        return cuadrado;
+    }
+    cuadradoDeElementos(numeros)
+</script>
+</html>
